@@ -1,0 +1,6 @@
+li = set()
+for i in nums:
+    if i in li:
+        return True
+    li.add(i)
+return False
