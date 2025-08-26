@@ -6,7 +6,7 @@ for i in nums:
         di[i] = 1
 return any(val > 1 for val in di.values())
 
-# or 
+# or
 
 # for i in di:
 #    if di[i] > 1:
