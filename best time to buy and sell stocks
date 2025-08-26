@@ -1,0 +1,11 @@
+diff = [0]
+profit = [0]
+for i in range(0, len(prices)-1):
+    for j in range(i+1, len(prices)):
+        diff.append(prices[j]-prices[i])
+    profit.append(max(diff))
+profit_max = max(profit)
+if profit_max >= 0:
+    return profit_max
+else:
+    return 0
