@@ -1,0 +1,7 @@
+min_price = float("inf")
+max_profit = 0
+for price in prices:
+    min_price= min(min_price, price) #it keeps the smallest number by comparing the last found smallest and the new number taken and updates itself if found 
+    profit = price - min_price # its the differnce of the current price taken and then smallest number so far found the traversal
+    max_profit = max(max_profit, profit) # it keeps the max profit, everytime the new profit is calculated, it compares the new profit to the old biggest profit and updates it
+return max_profit
