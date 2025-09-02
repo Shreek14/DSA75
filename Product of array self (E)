@@ -1,0 +1,19 @@
+answer = [1]*len(nums)
+pre = [1]*len(nums)
+post = [1]*len(nums)
+for i in range(len(nums)):
+    pre[i] = pre[i-1]*nums[i]
+    post[-i-1] = nums[-i-1]*post[-i]
+
+for i in range(len(nums)):
+    a = i - 1
+    b = i + 1
+    if a < 0:
+        print("i", i)
+        answer[i] = post[b]
+    elif b >= len(nums):
+        answer[i] = pre[a]
+    else:
+        answer[i] = pre[a]*post[b]
+
+return answer
