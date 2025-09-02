@@ -1,0 +1,11 @@
+answer = [1]*len(nums)
+num = []
+num = nums
+j = 0
+
+for i in range(len(nums)):
+    a = num.pop(0)
+    answer[j] = math.prod(num) 
+    num.append(a)
+    j += 1
+return answer
