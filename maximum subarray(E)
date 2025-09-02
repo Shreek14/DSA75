@@ -1,0 +1,9 @@
+if len(nums) == 1:
+    num = nums[0]
+    return num
+  cursum= 0
+  maxsum = min(nums)
+  for num in nums:
+    cursum = max(num, (num+cursum))
+    maxsum = max(maxsum, cursum)
+  return maxsum
